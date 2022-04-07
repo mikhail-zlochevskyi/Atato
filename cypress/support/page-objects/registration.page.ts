@@ -13,6 +13,8 @@ class RegistrationPage {
     
     getTermsError() { return cy.get('p[data-testid="terms-error"]'); }
     getHeaderTitle() { return cy.get('h1.elementor-heading-title'); }
+    getInvalidPasswordPopup() { return cy.get('div[name="popover-password"]'); }
+    getInvalidWorkspace() { return cy.get('#workspace-feedback'); }
 
     googleCaptcha() { return cy.get('.grecaptcha-logo'); }
 }
