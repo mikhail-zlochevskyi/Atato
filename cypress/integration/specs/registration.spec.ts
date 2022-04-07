@@ -1,10 +1,11 @@
 import registration from "../../support/page-objects/registration.page";
 
 describe('Registration page', () => {
-    const email = "test@gmail.com";
+
+    const email = "zig-92@ya.ru";
     const workspace = "worker";
     const invalidWorkspace = "@worker";
-    const password = "assa6767Q!";
+    const password = "qweQWE!@#123";
     const invalidPassword = "assa";
     const firstName = 'Mike';
     const lastName = 'Z';
@@ -15,7 +16,8 @@ describe('Registration page', () => {
     });
 
     it('Visit page, all major elements displayed', () => {
-        // add elements visibility
+        registration.getGoogleCaptcha().should("be.hidden");
+        registration.getLoginLink().should("be.visible");
     });
 
     it('Visit page, input valid email, first and last name, no error expected', () => {

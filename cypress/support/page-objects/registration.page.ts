@@ -16,7 +16,8 @@ class RegistrationPage {
     getInvalidPasswordPopup() { return cy.get('div[name="popover-password"]'); }
     getInvalidWorkspace() { return cy.get('#workspace-feedback'); }
 
-    googleCaptcha() { return cy.get('.grecaptcha-logo'); }
+    getGoogleCaptcha() { return cy.get('div.grecaptcha-badge'); }
+    getLoginLink() { return cy.get('a[data-testid="login"]'); }
 }
 
 export default new RegistrationPage;
